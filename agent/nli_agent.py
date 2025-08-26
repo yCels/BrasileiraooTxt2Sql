@@ -1,8 +1,7 @@
 import requests
 from txt2sql_model import Qwen2Txt2SQL
 
-SERVER_URL = "http://localhost:8000"  # ajuste se necessário
-
+SERVER_URL = "http://localhost:8000"  
 def get_schema():
     resp = requests.get(f"{SERVER_URL}/tools/get-schema")
     return resp.json()
